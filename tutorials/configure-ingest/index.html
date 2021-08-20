@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#configure-ingest" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -202,9 +207,71 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configure Ingest
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Configure Ingest
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-ingest" class="md-nav__link">
+    Configure Ingest
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Ingest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-directory" class="md-nav__link">
+    Create the directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-the-template" class="md-nav__link">
+    Copy the template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-metadatayaml" class="md-nav__link">
+    Edit metadata.yaml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-the-source-file-yaml" class="md-nav__link">
+    Edit the source file yaml
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -349,6 +416,70 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-ingest" class="md-nav__link">
+    Configure Ingest
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Ingest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-directory" class="md-nav__link">
+    Create the directory
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-the-template" class="md-nav__link">
+    Copy the template
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-metadatayaml" class="md-nav__link">
+    Edit metadata.yaml
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-the-source-file-yaml" class="md-nav__link">
+    Edit the source file yaml
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -357,9 +488,18 @@
                 
                   <h1>Configure Ingest</h1>
                 
-                <ul>
-<li>download the file and put it in the data directory (the process until we have local downloads)</li>
-<li>create the directory and copy the template</li>
+                <h3 id="configure-ingest">Configure Ingest</h3>
+<p>download the file and put it in the data directory (This is the process until we have local downloads)</p>
+<h5 id="create-the-directory">Create the directory</h5>
+<pre><code class="language-bash">mkdir monarch_ingest/somethingbase
+</code></pre>
+<h5 id="copy-the-template">Copy the template</h5>
+<pre><code class="language-bash">cp source_template/* monarch_ingest/somethingbase
+</code></pre>
+<h5 id="edit-metadatayaml">Edit metadata.yaml</h5>
+<p>Update the description, rights link, url, etc and then add your source_file</p>
+<h5 id="edit-the-source-file-yaml">Edit the source file yaml</h5>
+<ul>
 <li>match the columns or required fields up with what's available in the file to be ingested<ul>
 <li>If it's an ingest that exists in <a href="">Dipper</a>, check out what Dipper does.</li>
 <li>Check the <a href="">Biolink Model</a> documation to look at what you can capture</li>

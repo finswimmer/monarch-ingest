@@ -16,7 +16,7 @@
     
     
       
-        <title>Tests First - Monarch Ingest</title>
+        <title>Test - Monarch Ingest</title>
       
     
     
@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#testing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -88,7 +93,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tests First
+              Test
             
           </span>
         </div>
@@ -180,13 +185,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       <label class="md-nav__link" for="__nav_1">
-        Tutorials
+        Ingest Tutorial
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <nav class="md-nav" aria-label="Ingest Tutorial" data-md-level="1">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          Tutorials
+          Ingest Tutorial
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -196,7 +201,31 @@
   
     <li class="md-nav__item">
       <a href="../configure-ingest/" class="md-nav__link">
-        Configure Ingest
+        Configure
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../add-documentation/" class="md-nav__link">
+        Document
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../implement-ingest/" class="md-nav__link">
+        Implement
       </a>
     </li>
   
@@ -214,9 +243,92 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Tests First
+        Test
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-fixtures" class="md-nav__link">
+    Basic fixtures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-map-if-necessary" class="md-nav__link">
+    A map, if necessary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixtures-for-test-data" class="md-nav__link">
+    Fixtures for test data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixture-for-transforming-a-single-row" class="md-nav__link">
+    Fixture for transforming a single row
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-basics-of-the-ingest" class="md-nav__link">
+    Test the basics of the ingest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-against-an-alternate-row" class="md-nav__link">
+    Test against an alternate row
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    Parameterized tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -227,32 +339,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../implement-ingest/" class="md-nav__link">
-        Implement Ingest
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../validate-output/" class="md-nav__link">
-        Validate Output
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../add-documentation/" class="md-nav__link">
-        Add Documentation
+        Validate
       </a>
     </li>
   
@@ -349,15 +437,221 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-fixtures" class="md-nav__link">
+    Basic fixtures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-map-if-necessary" class="md-nav__link">
+    A map, if necessary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixtures-for-test-data" class="md-nav__link">
+    Fixtures for test data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixture-for-transforming-a-single-row" class="md-nav__link">
+    Fixture for transforming a single row
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-the-basics-of-the-ingest" class="md-nav__link">
+    Test the basics of the ingest
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-against-an-alternate-row" class="md-nav__link">
+    Test against an alternate row
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    Parameterized tests
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Tests First</h1>
+                  <h1>Test</h1>
                 
-                
+                <h3 id="testing">Testing</h3>
+<p>You may want to start with the test template within <code>source_template</code></p>
+<h5 id="basic-fixtures">Basic fixtures</h5>
+<p>Initially, set up your basic fixtures, taking care to set the correct source name and location for the transform code.</p>
+<pre><code class="language-python">import pytest
+from koza.koza_runner import get_translation_table
+
+
+@pytest.fixture
+def tt():
+    return get_translation_table(&quot;monarch_ingest/translation_table.yaml&quot;, None)
+
+# This name must match the ingest name in the transform code
+@pytest.fixture
+def source_name():
+    return &quot;something-to-somethingelse&quot;
+
+# This is the location of the transform code
+@pytest.fixture
+def script():
+    return &quot;./monarch_ingest/somethingbase/something2somethingelse.py&quot;
+</code></pre>
+<h5 id="a-map-if-necessary">A map, if necessary</h5>
+<p>Some ingests will depend on one or more maps, that fixture can be set up here. Note that this fixture must return a map of maps, and that the inner maps will map from an ID to a dictionary representing column headers and values. </p>
+<p>In the example below, a map is created that maps from a big concatenated natural key (as the ID) for ZP to a single column (called <code>iri</code>) that contains the ZP ID. </p>
+<p>This map is then placed into the map cache under the name <code>eqe2zp</code></p>
+<pre><code class="language-python">@pytest.fixture
+def map_cache():
+    eqe2zp = {
+        &quot;0-0-ZFA:0000042-PATO:0000638-0-0-0&quot;: {&quot;iri&quot;: &quot;ZP:0004225&quot;},
+        &quot;BSPO:0000112-BFO:0000050-ZFA:0000042-PATO:0000638-0-0-0&quot;: {
+            &quot;iri&quot;: &quot;ZP:0011243&quot;
+        },
+        &quot;BSPO:0000000-BFO:0000050-ZFA:0000823-PATO:0000642-BSPO:0000007-BFO:0000050-ZFA:0000823&quot;: {
+            &quot;iri&quot;: &quot;ZP:0000157&quot;
+        },
+    }
+    return {&quot;eqe2zp&quot;: eqe2zp}
+</code></pre>
+<h5 id="fixtures-for-test-data">Fixtures for test data</h5>
+<p>Create a fixture that returns a dictionary to represent a single row. As a matter of strategy, this row should probably represent a fairly basic row being ingested. </p>
+<p>One trick so that you don't have to manually convert from the imput format to a python dictionary format is to run your ingest with a debugger and set a breakpoint just after a row has been injected. If you want a more specific piece of data, check out conditional breakpoints. </p>
+<pre><code class="language-python">@pytest.fixture
+def basic_row():
+    return {
+        &quot;ID&quot;: &quot;341492416&quot;,
+        &quot;Gene Symbol&quot;: &quot;pax2a&quot;,
+        &quot;Gene ID&quot;: &quot;ZDB-GENE-990415-8&quot;,
+         #...
+        &quot;Fish Environment ID&quot;: &quot;ZDB-GENOX-041102-1385&quot;,
+        &quot;Publication ID&quot;: &quot;ZDB-PUB-970210-19&quot;,
+        &quot;Figure ID&quot;: &quot;ZDB-FIG-120307-8&quot;,
+    }
+</code></pre>
+<h5 id="fixture-for-transforming-a-single-row">Fixture for transforming a single row</h5>
+<p>This sets up a fixture you can call more than once to independently test different attributes</p>
+<pre><code class="language-python">@pytest.fixture
+def basic_g2p(mock_koza, source_name, basic_row, script, map_cache, tt):
+    return mock_koza(
+        source_name,
+        iter([basic_row]),
+        script,
+        map_cache=map_cache,
+        translation_table=tt,
+    )
+</code></pre>
+<h5 id="test-the-basics-of-the-ingest">Test the basics of the ingest</h5>
+<p>Confirm that entities are created matching the expectations on the row</p>
+<pre><code class="language-python"># A simple end-to-end test is to confirm that the IDs are set on
+def test_gene(basic_g2p):
+    gene = basic_g2p[0]
+    assert gene
+    assert gene.id == &quot;ZFIN:ZDB-GENE-990415-8&quot;
+
+
+def test_phenotypic_feature(basic_g2p):
+    phenotypic_feature = basic_g2p[1]
+    assert phenotypic_feature
+    assert phenotypic_feature.id == &quot;ZP:0004225&quot;
+
+
+def test_association(basic_g2p):
+    association = basic_g2p[2]
+    assert association
+    assert association.subject == &quot;ZFIN:ZDB-GENE-990415-8&quot;
+    assert association.object == &quot;ZP:0004225&quot;
+    assert association.publications
+    assert association.publications[0] == &quot;ZFIN:ZDB-PUB-970210-19&quot;
+</code></pre>
+<h5 id="test-against-an-alternate-row">Test against an alternate row</h5>
+<p>For any branching within the transform code, it's a good idea to test against all of the paths through the code. It's possible to set conditional breakpoints to find real examples in the code that will hit each code path, but it may be more practical to modify the basic row as a new fixture</p>
+<p>The example below creates a row with additional columns filled in.</p>
+<pre><code class="language-python">@pytest.fixture
+def postcomposed(mock_koza, source_name, basic_row, script, map_cache, tt):
+
+    basic_row[&quot;Affected Structure or Process 1 subterm ID&quot;] = &quot;BSPO:0000112&quot;
+    basic_row[&quot;Post-composed Relationship ID&quot;] = &quot;BFO:0000050&quot;
+    basic_row[&quot;Affected Structure or Process 1 superterm ID&quot;] = &quot;ZFA:0000042&quot;
+
+    return mock_koza(
+        source_name,
+        iter([basic_row]),
+        script,
+        map_cache=map_cache,
+        translation_table=tt,
+    )
+</code></pre>
+<h5 id="parameterized-tests">Parameterized tests</h5>
+<p>Mixing <a href="https://docs.pytest.org/en/6.2.x/parametrize.html">parameterization</a> and fixtures changes the approach a little. In this case it makes more sense to alter the row using a parameter and then create the entities within the same method.  </p>
+<p>The test below is intended to confirm that when the tag column has any of the specified values, the row will be ignored (confirmed because no entities are created).</p>
+<pre><code class="language-python">@pytest.mark.parametrize(&quot;tag&quot;, [&quot;normal&quot;, &quot;exacerbated&quot;, &quot;ameliorated&quot;])
+def test_excluded_tags(mock_koza, source_name, basic_row, script, map_cache, tt, tag):
+    basic_row[&quot;Phenotype Tag&quot;] = tag
+    entities = mock_koza(
+        source_name,
+        iter([basic_row]),
+        script,
+        map_cache=map_cache,
+        translation_table=tt,
+    )
+    assert len(entities) == 0
+</code></pre>
                 
               
               
@@ -377,7 +671,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../configure-ingest/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configure Ingest" rel="prev">
+        <a href="../implement-ingest/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Implement" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -386,20 +680,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Configure Ingest
+              Implement
             </div>
           </div>
         </a>
       
       
         
-        <a href="../implement-ingest/" class="md-footer__link md-footer__link--next" aria-label="Next: Implement Ingest" rel="next">
+        <a href="../validate-output/" class="md-footer__link md-footer__link--next" aria-label="Next: Validate" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Implement Ingest
+              Validate
             </div>
           </div>
           <div class="md-footer__button md-icon">

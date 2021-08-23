@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#kgx-validate-and-add-to-merge-config" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -250,9 +255,37 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Validate
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Validate
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kgx-validate-and-add-to-merge-config" class="md-nav__link">
+    KGX: Validate and add to merge config
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -349,6 +382,36 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kgx-validate-and-add-to-merge-config" class="md-nav__link">
+    KGX: Validate and add to merge config
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -357,7 +420,16 @@
                 
                   <h1>Validate</h1>
                 
-                
+                <h3 id="kgx-validate-and-add-to-merge-config">KGX: Validate and add to merge config</h3>
+<p>Run the transform to produce KGX files</p>
+<pre><code class="language-bash">poetry run koza transform --global-table monarch_ingest/translation_table.yaml --source monarch_ingest/alliance/metadata.yaml --output-format tsv
+ ```
+
+Validate the output with kgx
+```bash
+poetry run kgx validate -i tsv output/Somethingbase.gene-to-disease_nodes.tsv output/Somethingbase.gene-to-disease_edges.tsv
+</code></pre>
+<p>Finally, add the node and edge files to <code>merge.yaml</code> at the top of the project</p>
                 
               
               

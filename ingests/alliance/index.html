@@ -339,15 +339,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gene-phenotype" class="md-nav__link">
-    Gene Phenotype
+  <a href="#gene-to-phenotype" class="md-nav__link">
+    Gene to Phenotype
   </a>
   
-    <nav class="md-nav" aria-label="Gene Phenotype">
+    <nav class="md-nav" aria-label="Gene to Phenotype">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#biolink-captured_1" class="md-nav__link">
+    Biolink captured
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-to-disease" class="md-nav__link">
+    Gene to Disease
+  </a>
+  
+    <nav class="md-nav" aria-label="Gene to Disease">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biolink-captured_2" class="md-nav__link">
     Biolink captured
   </a>
   
@@ -452,15 +472,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gene-phenotype" class="md-nav__link">
-    Gene Phenotype
+  <a href="#gene-to-phenotype" class="md-nav__link">
+    Gene to Phenotype
   </a>
   
-    <nav class="md-nav" aria-label="Gene Phenotype">
+    <nav class="md-nav" aria-label="Gene to Phenotype">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#biolink-captured_1" class="md-nav__link">
+    Biolink captured
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-to-disease" class="md-nav__link">
+    Gene to Disease
+  </a>
+  
+    <nav class="md-nav" aria-label="Gene to Disease">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biolink-captured_2" class="md-nav__link">
     Biolink captured
   </a>
   
@@ -507,14 +547,14 @@
 </ul>
 </li>
 </ul>
-<h3 id="gene-phenotype">Gene Phenotype</h3>
+<h3 id="gene-to-phenotype">Gene to Phenotype</h3>
 <p>Phenotype for the subset of Alliance species which use phenotype ontologies (Human, Rat, Mouse, Worm) are loaded using the <a href="https://github.com/alliance-genome/agr_schemas/tree/master/ingest/phenotype">phenotype ingest format</a>, since there is not yet a phenotype export file from the Alliance. This file contains both Gene and Allele phenotypes, so a single column TSV is produced from BGI files listing Gene IDs to check the category and only genes are included. Environmental conditions are present for some species and are captured using the qualifier.</p>
 <h4 id="biolink-captured_1">Biolink captured</h4>
 <ul>
 <li>
 <p>biolink:Gene</p>
 <ul>
-<li>id</li>
+<li>id </li>
 </ul>
 </li>
 <li>
@@ -535,6 +575,71 @@
 <li>qualifiers (condition terms)</li>
 </ul>
 </li>
+</ul>
+<h3 id="gene-to-disease">Gene to Disease</h3>
+<p>Alliance disease associations </p>
+<p>Notes: 
+including only genes
+excluding any experimental conditions to start, since they're just text descriptions rather than terms.  (could exclude only rows that have 'Induced By' prefixing the conditions description?)
+is the ECO term a qualifier? 
+Need a predicate for each kind of relationship:</p>
+<table>
+<thead>
+<tr>
+<th>Alliance AssociationType</th>
+<th>predicate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>biomarker_via_orthology</td>
+<td><em>do we want inferred via orthology?</em></td>
+</tr>
+<tr>
+<td>implicated_via_orthology</td>
+<td><em>do we want inferred via orthology?</em></td>
+</tr>
+<tr>
+<td>is_implicated_in</td>
+<td>"involved in": "RO:0002331" <em>(maybe?)</em> "related to"?</td>
+</tr>
+<tr>
+<td>is_marker_for</td>
+<td>is marker for RO:0002607 <strong>(needs to go into TT)</strong></td>
+</tr>
+<tr>
+<td>is_model_of</td>
+<td>"is model of": "RO:0003301"</td>
+</tr>
+<tr>
+<td>is_not_implicated_in</td>
+<td>negation plus "involved in": "RO:0002331" <em>(maybe?)</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="biolink-captured_2">Biolink captured</h4>
+<ul>
+<li>biolink:Gene</li>
+<li>
+<p>id (row['DBObjectID'])</p>
+</li>
+<li>
+<p>biolink:Disease</p>
+</li>
+<li>
+<p>id (row['DOID'])</p>
+</li>
+<li>
+<p>biolink:GeneToDiseaseAssociation</p>
+</li>
+<li>id (random uuid)</li>
+<li>subject (gene.id)</li>
+<li>predicates (see table above)</li>
+<li>object (disease.id)</li>
+<li>negated (for 'is not implicated in')</li>
+<li>relation (see predicate table above? )</li>
+<li>publications (row['Reference'])</li>
+<li>source (row['source'])</li>
 </ul>
                 
               

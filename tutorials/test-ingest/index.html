@@ -269,60 +269,54 @@
     Testing
   </a>
   
-    <nav class="md-nav" aria-label="Testing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#basic-fixtures" class="md-nav__link">
     Basic fixtures
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#a-map-if-necessary" class="md-nav__link">
     A map, if necessary
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fixtures-for-test-data" class="md-nav__link">
     Fixtures for test data
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fixture-for-transforming-a-single-row" class="md-nav__link">
     Fixture for transforming a single row
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#test-the-basics-of-the-ingest" class="md-nav__link">
     Test the basics of the ingest
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#test-against-an-alternate-row" class="md-nav__link">
     Test against an alternate row
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#parameterized-tests" class="md-nav__link">
     Parameterized tests
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -458,60 +452,54 @@
     Testing
   </a>
   
-    <nav class="md-nav" aria-label="Testing">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#basic-fixtures" class="md-nav__link">
     Basic fixtures
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#a-map-if-necessary" class="md-nav__link">
     A map, if necessary
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fixtures-for-test-data" class="md-nav__link">
     Fixtures for test data
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#fixture-for-transforming-a-single-row" class="md-nav__link">
     Fixture for transforming a single row
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#test-the-basics-of-the-ingest" class="md-nav__link">
     Test the basics of the ingest
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#test-against-an-alternate-row" class="md-nav__link">
     Test against an alternate row
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#parameterized-tests" class="md-nav__link">
     Parameterized tests
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -530,9 +518,9 @@
                 
                   <h1>Test</h1>
                 
-                <h3 id="testing">Testing</h3>
+                <h6 id="testing">Testing</h6>
 <p>You may want to start with the test template within <code>source_template</code></p>
-<h5 id="basic-fixtures">Basic fixtures</h5>
+<h6 id="basic-fixtures">Basic fixtures</h6>
 <p>Initially, set up your basic fixtures, taking care to set the correct source name and location for the transform code.</p>
 <pre><code class="language-python">import pytest
 from koza.koza_runner import get_translation_table
@@ -552,7 +540,7 @@ def source_name():
 def script():
     return &quot;./monarch_ingest/somethingbase/something2somethingelse.py&quot;
 </code></pre>
-<h5 id="a-map-if-necessary">A map, if necessary</h5>
+<h6 id="a-map-if-necessary">A map, if necessary</h6>
 <p>Some ingests will depend on one or more maps, that fixture can be set up here. Note that this fixture must return a map of maps, and that the inner maps will map from an ID to a dictionary representing column headers and values. </p>
 <p>In the example below, a map is created that maps from a big concatenated natural key (as the ID) for ZP to a single column (called <code>iri</code>) that contains the ZP ID. </p>
 <p>This map is then placed into the map cache under the name <code>eqe2zp</code></p>
@@ -569,7 +557,7 @@ def map_cache():
     }
     return {&quot;eqe2zp&quot;: eqe2zp}
 </code></pre>
-<h5 id="fixtures-for-test-data">Fixtures for test data</h5>
+<h6 id="fixtures-for-test-data">Fixtures for test data</h6>
 <p>Create a fixture that returns a dictionary to represent a single row. As a matter of strategy, this row should probably represent a fairly basic row being ingested. </p>
 <p>One trick so that you don't have to manually convert from the imput format to a python dictionary format is to run your ingest with a debugger and set a breakpoint just after a row has been injected. If you want a more specific piece of data, check out conditional breakpoints. </p>
 <pre><code class="language-python">@pytest.fixture
@@ -584,7 +572,7 @@ def basic_row():
         &quot;Figure ID&quot;: &quot;ZDB-FIG-120307-8&quot;,
     }
 </code></pre>
-<h5 id="fixture-for-transforming-a-single-row">Fixture for transforming a single row</h5>
+<h6 id="fixture-for-transforming-a-single-row">Fixture for transforming a single row</h6>
 <p>This sets up a fixture you can call more than once to independently test different attributes</p>
 <pre><code class="language-python">@pytest.fixture
 def basic_g2p(mock_koza, source_name, basic_row, script, map_cache, tt):
@@ -596,7 +584,7 @@ def basic_g2p(mock_koza, source_name, basic_row, script, map_cache, tt):
         translation_table=tt,
     )
 </code></pre>
-<h5 id="test-the-basics-of-the-ingest">Test the basics of the ingest</h5>
+<h6 id="test-the-basics-of-the-ingest">Test the basics of the ingest</h6>
 <p>Confirm that entities are created matching the expectations on the row</p>
 <pre><code class="language-python"># A simple end-to-end test is to confirm that the IDs are set on
 def test_gene(basic_g2p):
@@ -619,7 +607,7 @@ def test_association(basic_g2p):
     assert association.publications
     assert association.publications[0] == &quot;ZFIN:ZDB-PUB-970210-19&quot;
 </code></pre>
-<h5 id="test-against-an-alternate-row">Test against an alternate row</h5>
+<h6 id="test-against-an-alternate-row">Test against an alternate row</h6>
 <p>For any branching within the transform code, it's a good idea to test against all of the paths through the code. It's possible to set conditional breakpoints to find real examples in the code that will hit each code path, but it may be more practical to modify the basic row as a new fixture</p>
 <p>The example below creates a row with additional columns filled in.</p>
 <pre><code class="language-python">@pytest.fixture
@@ -637,7 +625,7 @@ def postcomposed(mock_koza, source_name, basic_row, script, map_cache, tt):
         translation_table=tt,
     )
 </code></pre>
-<h5 id="parameterized-tests">Parameterized tests</h5>
+<h6 id="parameterized-tests">Parameterized tests</h6>
 <p>Mixing <a href="https://docs.pytest.org/en/6.2.x/parametrize.html">parameterization</a> and fixtures changes the approach a little. In this case it makes more sense to alter the row using a parameter and then create the entities within the same method.  </p>
 <p>The test below is intended to confirm that when the tag column has any of the specified values, the row will be ignored (confirmed because no entities are created).</p>
 <pre><code class="language-python">@pytest.mark.parametrize(&quot;tag&quot;, [&quot;normal&quot;, &quot;exacerbated&quot;, &quot;ameliorated&quot;])

@@ -323,18 +323,12 @@
     Gene Information
   </a>
   
-    <nav class="md-nav" aria-label="Gene Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#biolink-captured" class="md-nav__link">
     Biolink captured
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -343,18 +337,12 @@
     Gene to Phenotype
   </a>
   
-    <nav class="md-nav" aria-label="Gene to Phenotype">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#biolink-captured_1" class="md-nav__link">
     Biolink captured
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -363,18 +351,12 @@
     Gene to Disease
   </a>
   
-    <nav class="md-nav" aria-label="Gene to Disease">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#biolink-captured_2" class="md-nav__link">
     Biolink captured
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -456,18 +438,12 @@
     Gene Information
   </a>
   
-    <nav class="md-nav" aria-label="Gene Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#biolink-captured" class="md-nav__link">
     Biolink captured
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -476,18 +452,12 @@
     Gene to Phenotype
   </a>
   
-    <nav class="md-nav" aria-label="Gene to Phenotype">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#biolink-captured_1" class="md-nav__link">
     Biolink captured
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -496,18 +466,12 @@
     Gene to Disease
   </a>
   
-    <nav class="md-nav" aria-label="Gene to Disease">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#biolink-captured_2" class="md-nav__link">
     Biolink captured
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -531,9 +495,9 @@
 <li><a href="https://www.alliancegenome.org/downloads">Alliance Bulk Downloads</a></li>
 <li><a href="https://github.com/alliance-genome/agr_schemas">Alliance schemas</a></li>
 </ul>
-<h3 id="gene-information">Gene Information</h3>
+<h6 id="gene-information">Gene Information</h6>
 <p>Genes for all Alliance species (Human, Rat, Mouse, Fish, Fly, Worm, Yeast) are loaded using the <a href="https://github.com/alliance-genome/agr_schemas/tree/master/ingest/gene">BGI formatted</a> ingest files, as there are no Gene export files.</p>
-<h4 id="biolink-captured">Biolink captured</h4>
+<h6 id="biolink-captured">Biolink captured</h6>
 <ul>
 <li>biolink:Gene<ul>
 <li>id</li>
@@ -547,9 +511,9 @@
 </ul>
 </li>
 </ul>
-<h3 id="gene-to-phenotype">Gene to Phenotype</h3>
+<h6 id="gene-to-phenotype">Gene to Phenotype</h6>
 <p>Phenotype for the subset of Alliance species which use phenotype ontologies (Human, Rat, Mouse, Worm) are loaded using the <a href="https://github.com/alliance-genome/agr_schemas/tree/master/ingest/phenotype">phenotype ingest format</a>, since there is not yet a phenotype export file from the Alliance. This file contains both Gene and Allele phenotypes, so a single column TSV is produced from BGI files listing Gene IDs to check the category and only genes are included. Environmental conditions are present for some species and are captured using the qualifier.</p>
-<h4 id="biolink-captured_1">Biolink captured</h4>
+<h6 id="biolink-captured_1">Biolink captured</h6>
 <ul>
 <li>
 <p>biolink:Gene</p>
@@ -576,62 +540,38 @@
 </ul>
 </li>
 </ul>
-<h3 id="gene-to-disease">Gene to Disease</h3>
+<h6 id="gene-to-disease">Gene to Disease</h6>
 <p>Alliance disease associations </p>
 <p>Notes: 
 including only genes
 excluding any experimental conditions to start, since they're just text descriptions rather than terms.  (could exclude only rows that have 'Induced By' prefixing the conditions description?)
 is the ECO term a qualifier? 
 Need a predicate for each kind of relationship:</p>
-<table>
-<thead>
-<tr>
-<th>Alliance AssociationType</th>
-<th>predicate</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>biomarker_via_orthology</td>
-<td><em>is this is_marker_for, but with a qualifier?</em></td>
-</tr>
-<tr>
-<td>implicated_via_orthology</td>
-<td><em>is this is_implicated_in, but with a qualifier</em></td>
-</tr>
-<tr>
-<td>is_implicated_in</td>
-<td>"involved in": "RO:0002331" <em>(maybe?)</em> "related to"?</td>
-</tr>
-<tr>
-<td>is_marker_for</td>
-<td>is marker for RO:0002607 <strong>(needs to go into TT)</strong></td>
-</tr>
-<tr>
-<td>is_model_of</td>
-<td>"is model of": "RO:0003301"</td>
-</tr>
-<tr>
-<td>is_not_implicated_in</td>
-<td>negation plus "involved in": "RO:0002331" <em>(maybe?)</em></td>
-</tr>
-</tbody>
-</table>
-<h4 id="biolink-captured_2">Biolink captured</h4>
+<p>| Alliance AssociationType | predicate | relation | 
+|  ----------------------- | --------- |
+| biomarker_via_orthology  | Predicate.biomarker_for |<em>currently excluded, is this is_marker_for, but with a qualifier?</em> |
+| implicated_via_orthology  | Predicate.contributes_to | <em>currently excluded, is this is_implicated_in, but with a qualifier?</em> |
+| is_implicated_in | Predicate.contributes_to | "RO:0003302" |
+| is_marker_for | Predicate.biomarker_for | "RO:0002607" |
+| is_model_of | Predicate.model_of | "RO:0003301" |
+| is_not_implicated_in | negation plus "RO:0003302"|</p>
+<h6 id="biolink-captured_2">Biolink captured</h6>
 <ul>
-<li>biolink:Gene</li>
 <li>
-<p>id (row['DBObjectID'])</p>
+<p>biolink:Gene</p>
+<ul>
+<li>id (row['DBObjectID'])</li>
+</ul>
 </li>
 <li>
 <p>biolink:Disease</p>
-</li>
-<li>
-<p>id (row['DOID'])</p>
+<ul>
+<li>id (row['DOID'])</li>
+</ul>
 </li>
 <li>
 <p>biolink:GeneToDiseaseAssociation</p>
-</li>
+<ul>
 <li>id (random uuid)</li>
 <li>subject (gene.id)</li>
 <li>predicates (see table above)</li>
@@ -640,6 +580,8 @@ Need a predicate for each kind of relationship:</p>
 <li>relation (see predicate table above? )</li>
 <li>publications (row['Reference'])</li>
 <li>source (row['source'])</li>
+</ul>
+</li>
 </ul>
                 
               

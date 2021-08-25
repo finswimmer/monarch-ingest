@@ -420,7 +420,7 @@
                 
                   <h1>Validate</h1>
                 
-                <h3 id="kgx-validate-and-add-to-merge-config">KGX: Validate and add to merge config</h3>
+                <h6 id="kgx-validate-and-add-to-merge-config">KGX: Validate and add to merge config</h6>
 <p>Run the transform to produce KGX files</p>
 <pre><code class="language-bash">poetry run koza transform --global-table monarch_ingest/translation_table.yaml --source monarch_ingest/alliance/metadata.yaml --output-format tsv
  ```
@@ -429,7 +429,7 @@ Validate the output with kgx
 ```bash
 poetry run kgx validate -i tsv output/Somethingbase.gene-to-disease_nodes.tsv output/Somethingbase.gene-to-disease_edges.tsv
 </code></pre>
-<p>Finally, add the node and edge files to <code>merge.yaml</code> at the top of the project</p>
+<p>Finally, add the node and edge files to <code>merge.yaml</code> at the root of the project</p>
                 
               
               

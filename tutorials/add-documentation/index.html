@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#document-ingest" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -214,9 +219,37 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Document
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Document
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-ingest" class="md-nav__link">
+    Document Ingest
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -349,6 +382,36 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#document-ingest" class="md-nav__link">
+    Document Ingest
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -357,7 +420,12 @@
                 
                   <h1>Document</h1>
                 
-                
+                <h6 id="document-ingest">Document Ingest</h6>
+<p>The documentation for an ingest should reflect both the decision-making process that led to the output, and the output itself. </p>
+<p>Begin by copying the <code>source.md</code> file to the documentation folder, renaming it to match the ingest name and adding it to <code>mkdocs.yaml</code> in the root.</p>
+<p>This is a great time to look over the columns in the ingest file and consider what biolink classes are appropriate to represent them and what fields are available to populate on each.</p>
+<p><a href="https://biolink.github.io/biolink-model/docs/Association">List of Biolink Associations</a></p>
+<p><document the bmt lookup for ids? > </p>
                 
               
               

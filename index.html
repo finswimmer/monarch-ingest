@@ -416,9 +416,9 @@
                 
                   <h1>Home</h1>
                 
-                <h2 id="monarch-ingest">Monarch Ingest</h2>
+                <h5 id="monarch-ingest">Monarch Ingest</h5>
 <p>The Monarch Ingest generates <a href="https://github.com/biolink/kgx/blob/master/specification/kgx-format.md">KGX</a> formatted files conforming to the <a href="https://biolink.github.io/biolink-model/">BioLink Model</a> from a wide variety of biomedical data sources. </p>
-<h3 id="getting-started">Getting Started</h3>
+<h6 id="getting-started">Getting Started</h6>
 <p>First, clone the repository</p>
 <pre><code class="language-bash">gh repo clone monarch-initiative/monarch-ingest &amp;&amp; cd monarch-ingest
 </code></pre>
@@ -426,14 +426,14 @@
 <pre><code class="language-bash">make all
 </code></pre>
 <p>This will install Poetry, create the virtual environment and fetch dependencies.</p>
-<h3 id="downloading-data">Downloading data</h3>
+<h6 id="downloading-data">Downloading data</h6>
 <p>Using the Google Cloud cli you can download the whole data bucket</p>
 <pre><code class="language-bash">gsutil -m cp -R gs://monarch-ingest/data .
 </code></pre>
-<h3 id="running-an-ingest">Running an ingest</h3>
+<h6 id="running-an-ingest">Running an ingest</h6>
 <pre><code class="language-bash">poetry run koza transform --global-table monarch_ingest/translation_table.yaml --source monarch_ingest/alliance/metadata.yaml --output-format tsv  
 </code></pre>
-<h3 id="validate-the-output">Validate the output</h3>
+<h6 id="validate-the-output">Validate the output</h6>
 <pre><code class="language-bash"> kgx validate -i tsv output/Alliance.gene-to-phenotype_nodes.tsv output/Alliance.gene-to-phenotype_edges.tsv 
 </code></pre>
                 

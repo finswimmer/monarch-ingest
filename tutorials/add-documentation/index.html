@@ -424,8 +424,11 @@
 <p>The documentation for an ingest should reflect both the decision-making process that led to the output, and the output itself. </p>
 <p>Begin by copying the <code>source.md</code> file to the documentation folder, renaming it to match the ingest name and adding it to <code>mkdocs.yaml</code> in the root.</p>
 <p>This is a great time to look over the columns in the ingest file and consider what biolink classes are appropriate to represent them and what fields are available to populate on each.</p>
-<p><a href="https://biolink.github.io/biolink-model/docs/Association">List of Biolink Associations</a></p>
-<p><document the bmt lookup for ids? > </p>
+<p>Some helpful resources:
+    * <a href="https://biolink.github.io/biolink-model/">Biolink Documentation</a>
+    * <a href="https://biolink.github.io/biolink-model/docs/Association">List of Biolink Associations</a>
+    * Use a Jupyter Notebook with <a href="">Biolink Model Toolkit</a> to do things like <code>get_element_by_mapping('RO:0002410')</code>
+    * For ingests migrating from Dipper, check out the <a href="https://dipper.readthedocs.io/en/latest/sources.html">documentation</a> and <a href="https://github.com/monarch-initiative/dipper/tree/master/dipper/sources">source code</a></p>
                 
               
               

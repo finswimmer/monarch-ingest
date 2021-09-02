@@ -396,6 +396,27 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-all-transforms" class="md-nav__link">
+    Running all transforms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kgx-merge" class="md-nav__link">
+    KGX Merge
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    TLDR
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -435,6 +456,17 @@
 </code></pre>
 <h6 id="validate-the-output">Validate the output</h6>
 <pre><code class="language-bash"> kgx validate -i tsv output/Alliance.gene-to-phenotype_nodes.tsv output/Alliance.gene-to-phenotype_edges.tsv 
+</code></pre>
+<h6 id="running-all-transforms">Running all transforms</h6>
+<pre><code class="language-bash">make transform
+</code></pre>
+<h6 id="kgx-merge">KGX Merge</h6>
+<p>To merge all of the transformed files with ontologies into a single pair of node and edge files</p>
+<pre><code class="language-bash">make merge
+</code></pre>
+<h6 id="tldr">TLDR</h6>
+<p>If you want to generate it all as <code>output/merged/merged</code></p>
+<pre><code class="language-bash">make download transform merge
 </code></pre>
                 
               

@@ -337,6 +337,48 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Kozathon
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kozathon" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Kozathon
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="kozathon/setup/" class="md-nav__link">
+        Setup
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -367,6 +409,13 @@
   
     <nav class="md-nav" aria-label="Monarch Ingest">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kozathon" class="md-nav__link">
+    Kozathon
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
@@ -439,6 +488,8 @@
                 
                 <h5 id="monarch-ingest">Monarch Ingest</h5>
 <p>The Monarch Ingest generates <a href="https://github.com/biolink/kgx/blob/master/specification/kgx-format.md">KGX</a> formatted files conforming to the <a href="https://biolink.github.io/biolink-model/">BioLink Model</a> from a wide variety of biomedical data sources. </p>
+<h6 id="kozathon">Kozathon</h6>
+<p><a href="kozathon/setup/">Get set up for Kozathon</a></p>
 <h6 id="getting-started">Getting Started</h6>
 <p>First, clone the repository</p>
 <pre><code class="language-bash">gh repo clone monarch-initiative/monarch-ingest &amp;&amp; cd monarch-ingest
@@ -455,7 +506,7 @@
 <pre><code class="language-bash">poetry run koza transform --global-table monarch_ingest/translation_table.yaml --source monarch_ingest/alliance/metadata.yaml --output-format tsv  
 </code></pre>
 <h6 id="validate-the-output">Validate the output</h6>
-<pre><code class="language-bash"> kgx validate -i tsv output/Alliance.gene-to-phenotype_nodes.tsv output/Alliance.gene-to-phenotype_edges.tsv 
+<pre><code class="language-bash">poetry run kgx validate -i tsv output/Alliance.gene-to-phenotype_nodes.tsv output/Alliance.gene-to-phenotype_edges.tsv 
 </code></pre>
 <h6 id="running-all-transforms">Running all transforms</h6>
 <pre><code class="language-bash">make transform
@@ -465,7 +516,7 @@
 <pre><code class="language-bash">make merge
 </code></pre>
 <h6 id="tldr">TLDR</h6>
-<p>If you want to generate it all as <code>output/merged/merged</code></p>
+<p>If you want to generate it all as <code>output/merged/monarch-kg.tar.gz</code></p>
 <pre><code class="language-bash">make download transform merge
 </code></pre>
                 

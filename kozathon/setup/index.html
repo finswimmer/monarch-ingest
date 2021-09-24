@@ -547,7 +547,7 @@
                 <h5 id="kozathon">Kozathon</h5>
 <h6 id="setup">Setup</h6>
 <p>First, clone the repository</p>
-<pre><code class="language-bash">gh repo clone monarch-initiative/monarch-ingest &amp;&amp; cd monarch-ingest
+<pre><code class="language-bash">git clone https://github.com/monarch-initiative/monarch-ingest.git &amp;&amp; cd monarch-ingest
 </code></pre>
 <p>The Monarch Ingest is built using <a href="https://python-poetry.org">Poetry</a>, which will create its own virtual environment.</p>
 <pre><code class="language-bash">make all
@@ -555,7 +555,9 @@
 <p>This will install Poetry, create the virtual environment and fetch dependencies.</p>
 <h6 id="downloading-data">Downloading data</h6>
 <p>Download data files for our demo ingests. PomBase's phenotype annotations, a mini-StringDB file, and the HPOA file.</p>
-<pre><code class="language-bash">cd data
+<pre><code class="language-bash">#Assuming you are still in monarch-ingest dir
+mkdir -p data
+cd data
 curl -OJ https://www.pombase.org/data/annotations/Phenotype_annotations/phenotype_annotations.pombase.phaf.gz
 curl -OJ https://raw.githubusercontent.com/monarch-initiative/koza/main/tests/resources/source-files/string.tsv
 curl -OJ http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa

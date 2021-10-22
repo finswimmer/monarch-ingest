@@ -9,14 +9,14 @@
       
       
       
-        <link rel="canonical" href="https://monarch-initiative.github.io/monarch-ingest/ingests/zfin/">
+        <link rel="canonical" href="https://monarch-initiative.github.io/monarch-ingest/kozathon%202/setup/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>ZFIN - Monarch Ingest</title>
+        <title>Setup - Monarch Ingest</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gene-to-phenotype" class="md-skip">
+        <a href="#kozathon" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ZFIN
+              Setup
             
           </span>
         </div>
@@ -284,14 +284,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       
       
@@ -314,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../alliance/" class="md-nav__link">
+      <a href="../../ingests/alliance/" class="md-nav__link">
         Alliance of Genome Resources
       </a>
     </li>
@@ -328,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pombase/" class="md-nav__link">
+      <a href="../../ingests/pombase/" class="md-nav__link">
         PomBase
       </a>
     </li>
@@ -342,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../xenbase/" class="md-nav__link">
+      <a href="../../ingests/xenbase/" class="md-nav__link">
         XenBase
       </a>
     </li>
@@ -354,68 +352,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          ZFIN
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../ingests/zfin/" class="md-nav__link">
         ZFIN
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#gene-to-phenotype" class="md-nav__link">
-    Gene to Phenotype
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#biolink-captured" class="md-nav__link">
-    Biolink captured
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gene-to-publication" class="md-nav__link">
-    Gene to Publication
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#biolink-captured_1" class="md-nav__link">
-    Biolink captured
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -499,30 +440,50 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gene-to-phenotype" class="md-nav__link">
-    Gene to Phenotype
+  <a href="#kozathon" class="md-nav__link">
+    Kozathon
+  </a>
+  
+    <nav class="md-nav" aria-label="Kozathon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    Setup
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#biolink-captured" class="md-nav__link">
-    Biolink captured
+        
+          <li class="md-nav__item">
+  <a href="#downloading-data" class="md-nav__link">
+    Downloading data
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#gene-to-publication" class="md-nav__link">
-    Gene to Publication
+        
+          <li class="md-nav__item">
+  <a href="#make-sure-the-pombase-ingest-is-working" class="md-nav__link">
+    Make sure the PomBase ingest is working
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#biolink-captured_1" class="md-nav__link">
-    Biolink captured
+        
+          <li class="md-nav__item">
+  <a href="#validate-the-output" class="md-nav__link">
+    Validate the output*
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#youre-ready-for-kozathon" class="md-nav__link">
+    👍 You're ready for Kozathon
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -539,67 +500,35 @@
               
                 
                 
-                  <h1>ZFIN</h1>
+                  <h1>Setup</h1>
                 
-                <p>ZFIN is the Zebrafish Model Organism Database. </p>
-<ul>
-<li><a href="https://zfin.org/downloads">ZFIN bulk downloads</a></li>
-</ul>
-<h6 id="gene-to-phenotype">Gene to Phenotype</h6>
-<p>This ingest uses ZFIN's clean gene phenotype download file, which only contains phenotypes which can safely be associated to a single affected gene. This ingest is distinct from the Alliance phenotype index because ZFIN builds Entity-Quality-Entity phenotype statements that can be built from post-composed terms (E1a+E1b+Q+E2a+E2b), </p>
-<h6 id="biolink-captured">Biolink captured</h6>
-<ul>
-<li>
-<p>biolink:Gene</p>
-<ul>
-<li>id</li>
-</ul>
-</li>
-<li>
-<p>biolink:PhenotypicFeature</p>
-<ul>
-<li>id</li>
-</ul>
-</li>
-<li>
-<p>biolink:GeneToPhenotypicFeatureAssociation</p>
-<ul>
-<li>id (random uuid)</li>
-<li>subject (gene.id)</li>
-<li>predicate (has_phenotype)</li>
-<li>object (phenotypicFeature.id)</li>
-<li>relation (has phenotype)</li>
-<li>publication</li>
-</ul>
-</li>
-</ul>
-<h6 id="gene-to-publication">Gene to Publication</h6>
-<p>This ingest uses ZFIN's gene to publication download file, which only contains assocations between publications and genes that are denoted in some way in the publication. We have selected to use a consistent high level term for 'publication' (IAO:0000311) as it is heterogeneous mix of publication types being referenced. We have also opted to use the ZDB-ID for the publication node rather than a pubmed ID, on the assumption that kgx will clique merge them later.</p>
-<h6 id="biolink-captured_1">Biolink captured</h6>
-<ul>
-<li>
-<p>biolink:Gene</p>
-<ul>
-<li>id</li>
-</ul>
-</li>
-<li>
-<p>biolink:Publication</p>
-<ul>
-<li>id</li>
-</ul>
-</li>
-<li>
-<p>biolink:NamedThingToInformationContentEntityAssociation</p>
-<ul>
-<li>id (random uuid)</li>
-<li>subject (gene.id)</li>
-<li>predicate (mentions)</li>
-<li>object (publication.id)</li>
-<li>relation (mentions)</li>
-</ul>
-</li>
-</ul>
+                <h5 id="kozathon">Kozathon</h5>
+<h6 id="setup">Setup</h6>
+<p>First, clone the repository</p>
+<pre><code class="language-bash">git clone https://github.com/monarch-initiative/monarch-ingest.git &amp;&amp; cd monarch-ingest
+</code></pre>
+<p>The Monarch Ingest is built using <a href="https://python-poetry.org">Poetry</a>, which will create its own virtual environment.</p>
+<pre><code class="language-bash">make all
+</code></pre>
+<p>This will install Poetry, create the virtual environment and fetch dependencies.</p>
+<h6 id="downloading-data">Downloading data</h6>
+<p>Download data files for our demo ingests. PomBase's phenotype annotations, a mini-StringDB file, and the HPOA file.</p>
+<pre><code class="language-bash">#Assuming you are still in monarch-ingest dir
+mkdir -p data
+cd data
+curl -OJ https://www.pombase.org/data/annotations/Phenotype_annotations/phenotype_annotations.pombase.phaf.gz
+curl -OJ https://raw.githubusercontent.com/monarch-initiative/koza/main/tests/resources/source-files/string.tsv
+curl -OJ http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
+cd ..
+</code></pre>
+<h6 id="make-sure-the-pombase-ingest-is-working">Make sure the PomBase ingest is working</h6>
+<pre><code class="language-bash">poetry run koza transform --global-table monarch_ingest/translation_table.yaml --source monarch_ingest/pombase/metadata.yaml --output-format tsv  
+</code></pre>
+<h6 id="validate-the-output">Validate the output*</h6>
+<pre><code class="language-bash">poetry run kgx validate -i tsv output/PomBase.gene-to-phenotype_nodes.tsv output/PomBase.gene-to-phenotype_edges.tsv 
+</code></pre>
+<h6 id="youre-ready-for-kozathon">👍 You're ready for Kozathon</h6>
+<p>In the meantime, <a href="../../tutorials/configure-ingest/">check out the tutorial</a></p>
                 
               
               
@@ -615,41 +544,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../xenbase/" class="md-footer__link md-footer__link--prev" aria-label="Previous: XenBase" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              XenBase
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../kozathon/setup/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Setup
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

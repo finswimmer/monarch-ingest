@@ -62,6 +62,9 @@ def test_proteins(basic_pl):
 
     # 'category' is multivalued (an array)
     assert "biolink:Gene" in gene_a.category
+    
+    # TODO: this next assertion should NOT fail if the Pydantic and Koza KGX working properly (w/ the Biolink Model)
+    assert "biolink:BiologicalEntity" in gene_a.category
     assert "biolink:NamedThing" in gene_a.category
 
     # 'in_taxon' is multivalued (an array)
@@ -75,6 +78,9 @@ def test_proteins(basic_pl):
 
     # 'category' is multivalued (an array)
     assert "biolink:Gene" in gene_b.category
+    
+    # TODO: this next assertion should NOT fail if the Pydantic and Koza KGX working properly (w/ the Biolink Model)
+    assert "biolink:BiologicalEntity" in gene_b.category
     assert "biolink:NamedThing" in gene_b.category
 
     # 'in_taxon' is multivalued (an array)

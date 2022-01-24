@@ -13,6 +13,12 @@
   url: https://fms.alliancegenome.org/download/PHENOTYPE_HUMAN.json.gz
   local_name: data/alliance/PHENOTYPE_HUMAN.json.gz
 -
+  url: https://fms.alliancegenome.org/download/PHENOTYPE_HUMAN.json.gz
+  local_name: data/alliance/PHENOTYPE_FB.json.gz
+-
+  url: https://fms.alliancegenome.org/download/PHENOTYPE_HUMAN.json.gz
+  local_name: data/alliance/PHENOTYPE_SGD.json.gz
+-
   url: https://fms.alliancegenome.org/download/DISEASE-ALLIANCE_COMBINED.tsv.gz
   local_name: data/alliance/DISEASE-ALLIANCE_COMBINED.tsv.gz
 -
